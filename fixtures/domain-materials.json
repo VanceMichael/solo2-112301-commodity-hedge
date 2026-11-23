@@ -1,0 +1,297 @@
+{
+  "title": "备件通用性验证的量规差异与替代资格",
+  "source_note": "全部机构、事件、人员、规则和数值均为人工构造的本地合成资料。",
+  "contract": "长度 micrometers 为微米。reads 的 item 是实体件，gauge 是量规，标准件同时作为配对桥接实物。standards 的状态随 known 日期可见，生效区间为左闭右开。limits 指定机位装配的偏差容许区间、最少实物件和是否需证实相同工况。orders 中 qty 为件数，same_batch 为 1 时一个预留只能取同一实货批。",
+  "tables": {
+    "lots": [
+      {
+        "lot": "B1",
+        "supplier": "S1",
+        "arrival": "2026-10-01",
+        "on_hand": "6",
+        "service": "normal"
+      },
+      {
+        "lot": "B2",
+        "supplier": "S2",
+        "arrival": "2026-10-08",
+        "on_hand": "7",
+        "service": "high"
+      },
+      {
+        "lot": "B3",
+        "supplier": "S2",
+        "arrival": "2026-10-11",
+        "on_hand": "4",
+        "service": "normal"
+      },
+      {
+        "lot": "B4",
+        "supplier": "S3",
+        "arrival": "2026-10-13",
+        "on_hand": "2",
+        "service": "high"
+      }
+    ],
+    "standards": [
+      {
+        "id": "REF0",
+        "from": "2026-08-01",
+        "to": "2026-10-15",
+        "known": "2026-08-01",
+        "state": "valid"
+      },
+      {
+        "id": "REF1",
+        "from": "2026-10-05",
+        "to": "2026-11-02",
+        "known": "2026-10-05",
+        "state": "valid"
+      },
+      {
+        "id": "REF1",
+        "from": "2026-10-05",
+        "to": "2026-11-02",
+        "known": "2026-10-20",
+        "state": "withdraw"
+      },
+      {
+        "id": "REF2",
+        "from": "2026-10-20",
+        "to": "2026-11-30",
+        "known": "2026-10-20",
+        "state": "valid"
+      }
+    ],
+    "reads": [
+      {
+        "item": "REF0",
+        "lot": "~",
+        "gauge": "G1",
+        "date": "2026-10-02",
+        "micrometers": "8020",
+        "reference": "REF0"
+      },
+      {
+        "item": "REF0",
+        "lot": "~",
+        "gauge": "G2",
+        "date": "2026-10-02",
+        "micrometers": "8018",
+        "reference": "REF0"
+      },
+      {
+        "item": "REF1",
+        "lot": "~",
+        "gauge": "G2",
+        "date": "2026-10-08",
+        "micrometers": "8020",
+        "reference": "REF1"
+      },
+      {
+        "item": "REF1",
+        "lot": "~",
+        "gauge": "G3",
+        "date": "2026-10-08",
+        "micrometers": "8025",
+        "reference": "REF1"
+      },
+      {
+        "item": "I1",
+        "lot": "B1",
+        "gauge": "G1",
+        "date": "2026-10-02",
+        "micrometers": "8021",
+        "reference": "REF0"
+      },
+      {
+        "item": "I1",
+        "lot": "B1",
+        "gauge": "G2",
+        "date": "2026-10-02",
+        "micrometers": "8019",
+        "reference": "REF0"
+      },
+      {
+        "item": "I2",
+        "lot": "B1",
+        "gauge": "G1",
+        "date": "2026-10-02",
+        "micrometers": "8021",
+        "reference": "REF0"
+      },
+      {
+        "item": "I3",
+        "lot": "B1",
+        "gauge": "G1",
+        "date": "2026-10-02",
+        "micrometers": "8023",
+        "reference": "REF0"
+      },
+      {
+        "item": "I4",
+        "lot": "B2",
+        "gauge": "G3",
+        "date": "2026-10-08",
+        "micrometers": "8024",
+        "reference": "REF1"
+      },
+      {
+        "item": "I5",
+        "lot": "B2",
+        "gauge": "G3",
+        "date": "2026-10-08",
+        "micrometers": "8028",
+        "reference": "REF1"
+      },
+      {
+        "item": "I6",
+        "lot": "B2",
+        "gauge": "G3",
+        "date": "2026-10-08",
+        "micrometers": "8026",
+        "reference": "REF1"
+      },
+      {
+        "item": "I7",
+        "lot": "B3",
+        "gauge": "G1",
+        "date": "2026-10-11",
+        "micrometers": "8028",
+        "reference": "REF0"
+      },
+      {
+        "item": "I8",
+        "lot": "B3",
+        "gauge": "G1",
+        "date": "2026-10-11",
+        "micrometers": "8022",
+        "reference": "REF0"
+      },
+      {
+        "item": "I9",
+        "lot": "B3",
+        "gauge": "G1",
+        "date": "2026-10-11",
+        "micrometers": "8025",
+        "reference": "REF0"
+      },
+      {
+        "item": "I10",
+        "lot": "B4",
+        "gauge": "G1",
+        "date": "2026-10-14",
+        "micrometers": "8022",
+        "reference": "REF0"
+      },
+      {
+        "item": "I11",
+        "lot": "B4",
+        "gauge": "G1",
+        "date": "2026-10-14",
+        "micrometers": "8021",
+        "reference": "REF0"
+      },
+      {
+        "item": "I12",
+        "lot": "B4",
+        "gauge": "G1",
+        "date": "2026-10-14",
+        "micrometers": "8022",
+        "reference": "REF0"
+      },
+      {
+        "item": "REF2",
+        "lot": "~",
+        "gauge": "G1",
+        "date": "2026-10-22",
+        "micrometers": "8020",
+        "reference": "REF2"
+      },
+      {
+        "item": "REF2",
+        "lot": "~",
+        "gauge": "G3",
+        "date": "2026-10-22",
+        "micrometers": "8024",
+        "reference": "REF2"
+      }
+    ],
+    "limits": [
+      {
+        "position": "X1",
+        "target": "8020",
+        "low_offset": "-3",
+        "high_offset": "6",
+        "min_items": "3",
+        "service": "normal"
+      },
+      {
+        "position": "X2",
+        "target": "8020",
+        "low_offset": "-2",
+        "high_offset": "4",
+        "min_items": "3",
+        "service": "high"
+      },
+      {
+        "position": "X3",
+        "target": "8020",
+        "low_offset": "-8",
+        "high_offset": "9",
+        "min_items": "3",
+        "service": "normal"
+      }
+    ],
+    "orders": [
+      {
+        "order": "O1",
+        "position": "X1",
+        "due": "2026-10-12",
+        "qty": "2",
+        "same_batch": "1",
+        "status": "installed",
+        "lot": "B1"
+      },
+      {
+        "order": "O2",
+        "position": "X2",
+        "due": "2026-10-22",
+        "qty": "2",
+        "same_batch": "1",
+        "status": "held",
+        "lot": "B2"
+      },
+      {
+        "order": "O3",
+        "position": "X1",
+        "due": "2026-10-21",
+        "qty": "2",
+        "same_batch": "1",
+        "status": "pending",
+        "lot": "~"
+      },
+      {
+        "order": "O4",
+        "position": "X3",
+        "due": "2026-10-21",
+        "qty": "3",
+        "same_batch": "1",
+        "status": "pending",
+        "lot": "~"
+      }
+    ],
+    "reserves": [
+      {
+        "position": "X2",
+        "group": "critical",
+        "min_qty": "2"
+      },
+      {
+        "position": "X3",
+        "group": "standard",
+        "min_qty": "1"
+      }
+    ]
+  }
+}
